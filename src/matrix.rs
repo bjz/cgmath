@@ -476,6 +476,18 @@ impl<S: BaseFloat> Matrix4<S> {
     pub fn is_finite(&self) -> bool {
         self.w.is_finite() && self.x.is_finite() && self.y.is_finite() && self.z.is_finite()
     }
+    
+    /// Create a matrix which flips the y and z coordnates.
+    ///
+    /// This is used to transform from a y-up coordinate system to
+    /// a z-up coordinate systems.
+    #[inline]
+    pub fn flip_y_up_to_z_up() -> Matrix4<S> {
+        Matrix4::new(S::one(), S::zero(), S::zero(), S::zero(),
+                     S::zero(), S::zero(), S::one(), S::zero(),
+                     S::zero(), -S::one(), S::zero(), S::zero(),
+                     S::zero(), S::zero(), S::zero(), S::one())
+    }
 }
 
 impl<S: BaseFloat> Zero for Matrix2<S> {
