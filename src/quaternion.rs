@@ -45,6 +45,7 @@ use mint;
 #[repr(C)]
 #[derive(Copy, Clone, Debug, PartialEq)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+#[cfg_attr(feature = "rkyv", derive(Archive, Unarchive))]
 pub struct Quaternion<S> {
     /// The vector part of the quaternion.
     pub v: Vector3<S>,

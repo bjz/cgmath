@@ -27,6 +27,7 @@ num-traits = "0.2"
 # small_rng used only for benchmarks
 rand = { version = "0.8", features = ["small_rng"], optional = true }
 serde = { version = "1.0", features = ["serde_derive"], optional = true }
+rkyv = { version = "0.3.1", optional = true }
 # works only in rust toolchain up to 1.32, disabled indefinitely
 #simd = { version = "0.2", optional = true }
 

@@ -81,6 +81,7 @@ use quaternion::Quaternion;
 #[repr(C)]
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+#[cfg_attr(feature = "rkyv", derive(Archive, Unarchive))]
 pub struct Euler<A> {
     /// The angle to apply around the _x_ axis. Also known at the _pitch_.
     pub x: A,

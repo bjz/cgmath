@@ -37,6 +37,7 @@ use mint;
 #[repr(C)]
 #[derive(PartialEq, Eq, Copy, Clone, Hash)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+#[cfg_attr(feature = "rkyv", derive(Archive, Unarchive))]
 pub struct Point1<S> {
     pub x: S,
 }
@@ -47,6 +48,7 @@ pub struct Point1<S> {
 #[repr(C)]
 #[derive(PartialEq, Eq, Copy, Clone, Hash)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+#[cfg_attr(feature = "rkyv", derive(Archive, Unarchive))]
 pub struct Point2<S> {
     pub x: S,
     pub y: S,
@@ -58,6 +60,7 @@ pub struct Point2<S> {
 #[repr(C)]
 #[derive(PartialEq, Eq, Copy, Clone, Hash)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+#[cfg_attr(feature = "rkyv", derive(Archive, Unarchive))]
 pub struct Point3<S> {
     pub x: S,
     pub y: S,

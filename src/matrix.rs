@@ -45,6 +45,7 @@ use mint;
 #[repr(C)]
 #[derive(Copy, Clone, PartialEq)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+#[cfg_attr(feature = "rkyv", derive(Archive, Unarchive))]
 pub struct Matrix2<S> {
     /// The first column of the matrix.
     pub x: Vector2<S>,
@@ -58,6 +59,7 @@ pub struct Matrix2<S> {
 #[repr(C)]
 #[derive(Copy, Clone, PartialEq)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+#[cfg_attr(feature = "rkyv", derive(Archive, Unarchive))]
 pub struct Matrix3<S> {
     /// The first column of the matrix.
     pub x: Vector3<S>,
@@ -73,6 +75,7 @@ pub struct Matrix3<S> {
 #[repr(C)]
 #[derive(Copy, Clone, PartialEq)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+#[cfg_attr(feature = "rkyv", derive(Archive, Unarchive))]
 pub struct Matrix4<S> {
     /// The first column of the matrix.
     pub x: Vector4<S>,

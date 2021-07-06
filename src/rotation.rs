@@ -164,6 +164,7 @@ pub trait Rotation3:
 /// ```
 #[derive(PartialEq, Copy, Clone)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+#[cfg_attr(feature = "rkyv", derive(Archive, Unarchive))]
 pub struct Basis2<S> {
     mat: Matrix2<S>,
 }
@@ -310,6 +311,7 @@ impl<S: fmt::Debug> fmt::Debug for Basis2<S> {
 /// been restricted to a subset of those implemented on `Matrix3`.
 #[derive(PartialEq, Copy, Clone)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+#[cfg_attr(feature = "rkyv", derive(Archive, Unarchive))]
 pub struct Basis3<S> {
     mat: Matrix3<S>,
 }

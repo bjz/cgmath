@@ -66,6 +66,10 @@ extern crate rand;
 #[macro_use]
 extern crate serde;
 
+#[cfg(feature = "rkyv")]
+#[macro_use]
+extern crate rkyv;
+
 #[cfg(feature = "simd")]
 extern crate simd;
 

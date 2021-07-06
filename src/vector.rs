@@ -39,6 +39,7 @@ use mint;
 #[repr(C)]
 #[derive(PartialEq, Eq, Copy, Clone, Hash)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+#[cfg_attr(feature = "rkyv", derive(Archive, Unarchive))]
 pub struct Vector1<S> {
     /// The x component of the vector.
     pub x: S,
@@ -50,6 +51,7 @@ pub struct Vector1<S> {
 #[repr(C)]
 #[derive(PartialEq, Eq, Copy, Clone, Hash)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+#[cfg_attr(feature = "rkyv", derive(Archive, Unarchive))]
 pub struct Vector2<S> {
     /// The x component of the vector.
     pub x: S,
@@ -63,6 +65,7 @@ pub struct Vector2<S> {
 #[repr(C)]
 #[derive(PartialEq, Eq, Copy, Clone, Hash)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+#[cfg_attr(feature = "rkyv", derive(Archive, Unarchive))]
 pub struct Vector3<S> {
     /// The x component of the vector.
     pub x: S,
@@ -78,6 +81,7 @@ pub struct Vector3<S> {
 #[repr(C)]
 #[derive(PartialEq, Eq, Copy, Clone, Hash)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+#[cfg_attr(feature = "rkyv", derive(Archive, Unarchive))]
 pub struct Vector4<S> {
     /// The x component of the vector.
     pub x: S,

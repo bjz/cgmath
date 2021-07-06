@@ -70,6 +70,7 @@ pub trait Transform<P: EuclideanSpace>: Sized + One {
 /// A generic transformation consisting of a rotation,
 /// displacement vector and scale amount.
 #[derive(Copy, Clone, Debug, PartialEq)]
+#[cfg_attr(feature = "rkyv", derive(Archive, Unarchive))]
 pub struct Decomposed<V: VectorSpace, R> {
     pub scale: V::Scalar,
     pub rot: R,
